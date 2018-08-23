@@ -97,13 +97,14 @@ var safeInnerHTML = function (app, template, append) {
 	//
 
 	var supports = function () {
-		if (!Array.from || !window.DOMParser) return;
+		if (!Array.from || !window.DOMParser) return false;
 		var parser = new DOMParser();
 		try {
 			parser.parseFromString('x', 'text/html');
 		} catch(err) {
 			return false;
 		}
+		return true;
 	};
 
 	/**
