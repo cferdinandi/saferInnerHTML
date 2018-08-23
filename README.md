@@ -57,7 +57,7 @@ The `safeInnerHTML()` method accepts three arguments.
 safeInnerHTML(elem, template, append);
 ```
 
-Here's an example. [Play with the demo.]()
+Here's an example. [Play with the demo.](https://codepen.io/cferdinandi/pen/PdPwga)
 
 ```html
 <div id="app"></div>
@@ -69,7 +69,7 @@ var template = '<p>Hello, world!</p><button>Click me</button>';
 safeInnerHTML(app, template);
 ```
 
-And here's another, this time appending the new string to the existing content. [There's a demo for that one, too.]()
+And here's another, this time appending the new string to the existing content. [There's a demo for that one, too.](https://codepen.io/cferdinandi/pen/RYWPbM)
 
 ```html
 <div id="app">
