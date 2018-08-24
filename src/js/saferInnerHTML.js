@@ -1,6 +1,8 @@
 var saferInnerHTML = function (app, template, append) {
 
 	'use strict';
+	
+	var parser = null;
 
 
 	//
@@ -9,7 +11,7 @@ var saferInnerHTML = function (app, template, append) {
 
 	var supports = function () {
 		if (!Array.from || !window.DOMParser) return false;
-		var parser = new DOMParser();
+		parser = parser || new DOMParser();
 		try {
 			parser.parseFromString('x', 'text/html');
 		} catch(err) {
@@ -117,7 +119,7 @@ var saferInnerHTML = function (app, template, append) {
 	 * @return {Node}       The template HTML
 	 */
 	var stringToHTML = function (str) {
-		var parser = new DOMParser();
+		parser = parser || new DOMParser();
 		var doc = parser.parseFromString(str, 'text/html');
 		return doc.body;
 	};
