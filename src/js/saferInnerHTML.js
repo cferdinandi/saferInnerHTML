@@ -1,4 +1,4 @@
-var safeInnerHTML = function (app, template, append) {
+var saferInnerHTML = function (app, template, append) {
 
 	'use strict';
 

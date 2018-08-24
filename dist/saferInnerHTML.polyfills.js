@@ -1,5 +1,5 @@
 /*!
- * saferInnerHTML v1.0.0: A vanilla JS helper function for safely injecting HTML into the DOM
+ * saferInnerHTML v1.0.1: A vanilla JS helper function for safely injecting HTML into the DOM
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/reef
@@ -87,7 +87,7 @@ if (!Array.from) {
 		};
 	}());
 }
-var safeInnerHTML = function (app, template, append) {
+var saferInnerHTML = function (app, template, append) {
 
 	'use strict';
 
