@@ -32,16 +32,16 @@ You can also use the [jsDelivr CDN](https://www.jsdelivr.com/package/gh/cferdina
 ```html
 <!-- Always get the latest version -->
 <!-- Not recommended for production sites! -->
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/reef/dist/saferInnerHTML.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML/dist/saferInnerHTML.polyfills.min.js"></script>
 
 <!-- Get minor updates and patch fixes within a major version -->
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/reef@1/dist/saferInnerHTML.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1/dist/saferInnerHTML.polyfills.min.js"></script>
 
 <!-- Get patch fixes within a minor version -->
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/reef@1.0/dist/saferInnerHTML.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1.0/dist/saferInnerHTML.polyfills.min.js"></script>
 
 <!-- Get a specific version -->
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/reef@1.0.0/dist/saferInnerHTML.polyfills.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/saferInnerHTML@1.0.0/dist/saferInnerHTML.polyfills.min.js"></script>
 ```
 
 ### 2. Inject any string into any element
