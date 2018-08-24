@@ -1,5 +1,5 @@
 /*!
- * saferInnerHTML v1.1.0: A vanilla JS helper function for safely injecting HTML into the DOM
+ * saferInnerHTML v1.1.1: A vanilla JS helper function for safely injecting HTML into the DOM
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/reef
@@ -137,10 +137,10 @@ var saferInnerHTML = function (app, template, append) {
 	//
 
 	// Don't run if there's no element to inject into
-	if (!app) throw 'safeInnerHTML: Please provide a valid element to inject content into';
+	if (!app) throw new Error('safeInnerHTML: Please provide a valid element to inject content into');
 
 	// Check for browser support
-	if (!supports()) throw 'safeInnerHTML: Your browser is not supported.';
+	if (!supports()) throw new Error('safeInnerHTML: Your browser is not supported.');
 
 	// Make sure browser supports it
 	var map = createDOMMap(stringToHTML(template));

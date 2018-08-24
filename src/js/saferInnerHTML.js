@@ -130,10 +130,10 @@ var saferInnerHTML = function (app, template, append) {
 	//
 
 	// Don't run if there's no element to inject into
-	if (!app) throw 'safeInnerHTML: Please provide a valid element to inject content into';
+	if (!app) throw new Error('safeInnerHTML: Please provide a valid element to inject content into');
 
 	// Check for browser support
-	if (!supports()) throw 'safeInnerHTML: Your browser is not supported.';
+	if (!supports()) throw new Error('safeInnerHTML: Your browser is not supported.');
 
 	// Make sure browser supports it
 	var map = createDOMMap(stringToHTML(template));
