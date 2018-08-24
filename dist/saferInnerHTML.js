@@ -1,5 +1,5 @@
 /*!
- * safeInnerHTML v0.0.3: A vanilla JS helper function for safely injecting HTML into the DOM
+ * saferInnerHTML v1.0.0: A vanilla JS helper function for safely injecting HTML into the DOM
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/reef

@@ -14,7 +14,9 @@
 <body>
 
 
-<div id="app"></div>
+	<div id="app">
+	    <p>Hi, universe!</p>
+	</div>
 
 
 	<script>
@@ -161,8 +163,8 @@
 	</script>
 	<script>
 		var app = document.querySelector('#app');
-		var template = '<p>Hello, world!</p><button>Click me</button>';
-		safeInnerHTML(app, template);
+		var template = '<button>Do NOT click me</button>';
+		safeInnerHTML(app, template, true);
 	</script>
 
 </body>
