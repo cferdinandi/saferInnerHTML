@@ -1,5 +1,5 @@
 /*!
- * saferInnerHTML v1.0.1: A vanilla JS helper function for safely injecting HTML into the DOM
+ * saferInnerHTML v1.1.0: A vanilla JS helper function for safely injecting HTML into the DOM
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/reef
@@ -90,6 +90,8 @@ if (!Array.from) {
 var saferInnerHTML = function (app, template, append) {
 
 	'use strict';
+	
+	var parser = null;
 
 
 	//
@@ -98,7 +100,7 @@ var saferInnerHTML = function (app, template, append) {
 
 	var supports = function () {
 		if (!Array.from || !window.DOMParser) return false;
-		var parser = new DOMParser();
+		parser = parser || new DOMParser();
 		try {
 			parser.parseFromString('x', 'text/html');
 		} catch(err) {
@@ -206,7 +208,7 @@ var saferInnerHTML = function (app, template, append) {
 	 * @return {Node}       The template HTML
 	 */
 	var stringToHTML = function (str) {
-		var parser = new DOMParser();
+		parser = parser || new DOMParser();
 		var doc = parser.parseFromString(str, 'text/html');
 		return doc.body;
 	};
