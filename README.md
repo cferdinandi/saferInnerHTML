@@ -11,9 +11,9 @@ Set the HTML of an element with the simplicity of `innerHTML`, while protecting 
 
 Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
 
-### 1. Include setInnerHTML on your site.
+### 1. Include saferInnerHTML on your site.
 
-There are two versions of setInnerHTML: the standalone version, and one that comes preloaded with a polyfill for `Array.from()`, which is only supported in newer browsers.
+There are two versions of saferInnerHTML: the standalone version, and one that comes preloaded with a polyfill for `Array.from()`, which is only supported in newer browsers.
 
 If you're including your own polyfills or don't want to support older browsers (you monster!), use the standalone version. Otherwise, use the version with polyfills.
 
