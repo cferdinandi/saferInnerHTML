@@ -1,5 +1,5 @@
 /*!
- * saferInnerHTML v1.1.1: A vanilla JS helper function for safely injecting HTML into the DOM
+ * saferInnerHTML v1.1.2: A vanilla JS helper function for safely injecting HTML into the DOM
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/reef
@@ -8,7 +8,12 @@
 var saferInnerHTML = function (app, template, append) {
 
 	'use strict';
-	
+
+
+	//
+	// Variables
+	//
+
 	var parser = null;
 
 
@@ -93,12 +98,10 @@ var saferInnerHTML = function (app, template, append) {
 	 * @param  {Array} map A map of the items to inject into the DOM
 	 */
 	var renderToDOM = function (map) {
-		var temp = document.createElement('div');
-		map.forEach((function (node, index) {
-			temp.appendChild(makeElem(node));
-		}));
 		if (!append) { app.innerHTML = ''; }
-		app.appendChild(temp);
+		map.forEach((function (node, index) {
+			app.appendChild(makeElem(node));
+		}));
 	};
 
 	/**
@@ -113,8 +116,7 @@ var saferInnerHTML = function (app, template, append) {
 				content: node.childNodes && node.childNodes.length > 0 ? null : node.textContent,
 				atts: node.nodeType === 3 ? [] : getAttributes(node.attributes),
 				type: node.nodeType === 3 ? 'text' : node.tagName.toLowerCase(),
-				children: createDOMMap(node),
-				node: node
+				children: createDOMMap(node)
 			});
 		}));
 		return map;
@@ -142,8 +144,7 @@ var saferInnerHTML = function (app, template, append) {
 	// Check for browser support
 	if (!supports()) throw new Error('safeInnerHTML: Your browser is not supported.');
 
-	// Make sure browser supports it
-	var map = createDOMMap(stringToHTML(template));
-	renderToDOM(map);
+	// Render the template into the DOM
+	renderToDOM(createDOMMap(stringToHTML(template)));
 
 };
