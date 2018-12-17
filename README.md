@@ -1,6 +1,8 @@
 # saferInnerHTML [![Build Status](https://travis-ci.org/cferdinandi/saferInnerHTML.svg)](https://travis-ci.org/cferdinandi/saferInnerHTML)
 Set the HTML of an element with the simplicity of `innerHTML`, while protecting yourself from XSS attacks.
 
+*__Deprecation Notice:__ use [DOMPurify](https://github.com/cure53/DOMPurify) instead. It's both simpler and more effective.*
+
 <hr>
 
 ### Want to learn how to write your own vanilla JS plugins? Check out my [Vanilla JS Pocket Guides](https://vanillajsguides.com/) or join the [Vanilla JS Academy](https://vanillajsacademy.com) and level-up as a web developer. 🚀
